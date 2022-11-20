@@ -29,6 +29,8 @@ app.get("/audio/:sp",function (req,res){
         if(err) { throw new Error(err); }
         console.log("Text to speech converted!");
     });
+
+    res.send("Audio Created")
     // const address = __dirname+ "/Voice.mp3"
  
     // const address = './Voice.mp3'
@@ -77,7 +79,7 @@ app.get("/move",function (req,res){
         }
         console.log(`File successfully moved!!`);
       });
-      res.send("Delete");
+      res.send("Moved");
 })
 
 app.get("/delete",function(req,res){
